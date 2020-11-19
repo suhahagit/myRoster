@@ -11,6 +11,16 @@ const defaultImage = function(img){
 const displayPlayers = function(){
     manager.players()
     setTimeout(function(){
-        renderer.renderPlayer(manager.data)}, 5000)
+        renderer.renderPlayer(manager.data)}, 500)
+}
+
+const requestTeam = function(){
+    manager.dreamTeam()
+    setTimeout(function(){
+        renderer.renderPlayer(manager.dream)}, 500)
+}
+
+const addPlayer = function(player){
+    manager.addDreamPlayer(player)
 }
 

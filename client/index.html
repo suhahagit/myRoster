@@ -10,22 +10,25 @@
 
     <div id = 'container'>
 
+        <button id = "dreamBtn" onclick="requestTeam()">Dream Team</button>
+
         <div id = 'input-bar'>
             <input id = 'input' type = 'text' placeholder="Team Name">
             <button id = 'btn' onclick="displayPlayers()">Get Roster</button>
         </div>
     
-        <div id = 'player-container'><div>
+        <div id = 'player-container'></div>
 
     </div>
     
     <script id = "player-template" type = "text/x-handlebars-template">
         {{#each players}}
-            <div class = 'player'>
-                <p>{{firstName}}</p>
-                <p>{{jersey}}</p>
-                <img class = 'image' src = 'https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}' onerror="defaultImage(this)">
-                <p>{{pos}}</p>
+            <div class = 'player' onclick="addPlayer(this)">
+                <div data-id = '{{lastName}}'></div>
+                <p class = 'firstName'>{{firstName}}</p>
+                <p class = 'jersey'>{{jersey}}</p>
+                <img class = 'image' src = '{{image}}' onerror="defaultImage(this)">
+                <p class="pos">{{pos}}</p>
             </div>
         {{/each}}
     </script>
