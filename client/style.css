@@ -1,0 +1,49 @@
+#container{
+    display: grid;
+}
+
+#input-bar{
+    display: grid;
+    justify-content: center;
+}
+
+#player-container{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+    margin: 100px;
+}
+
+.player{
+    display: grid;
+    background-color: orange;
+    justify-self: center;
+    padding: 10px;
+}
+
+.image{
+    background-color: lightgray;
+    display: grid;
+}
+
+P{
+    font-weight: bold;
+    justify-self: center;
+}
+
+#input{
+    width: 350px;
+    height: 30px;
+}
+
+input[type = "text"]::placeholder{
+    text-align: center; 
+}
+
+#btn{
+    width: 120px;
+    height: 30px;
+    justify-self: center;
+    margin-top: 10px;
+}
